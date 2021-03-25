@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+* {
+  margin: 0;
+}
+
+:root {
+  --default: #0d1333;
+  --gray: #f0f3fa;
+  --red: #ff7368;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: var(--default);
+}
+
+.sideBarContainer {
+  width: 350px;
+}
+
+.AccountContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile {
+  background: blue;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile img {
+  max-width: 100%;
+}
+
+.account {
+  display: flex;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 1em;
+  line-height: normal;
+}
+
+.username {
+  font-size: 1.2em;
+  font-weight: 400;
+}
+
+.accType {
+  font-size: 0.8em;
+}
+
+.notificationContainer {
+  position: relative;
+}
+
+.settingsbtn {
+  display: flex;
+}
+
+.notification,
+.settings {
+  border: 1px solid var(--gray);
+  border-radius: 16px;
+  padding: 6px 8px;
+  margin: 0 0.8em;
+}
+
+.indicator {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  color: white;
+  background-color: var(--red);
+}
