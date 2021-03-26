@@ -33,6 +33,12 @@ body {
   width: 350px;
 }
 
+.section {
+  background-color: #f9fafe;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
 .AccountContainer {
   display: flex;
   align-items: center;
@@ -317,4 +323,12 @@ body {
 
 .menu img {
   width: 30px;
+}
+
+/* trainers */
+
+.tgContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
