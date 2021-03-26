@@ -180,3 +180,44 @@ body {
   background-color: var(--green);
   width: 40%;
 }
+
+/* bubble section */
+
+.bubble {
+  background-color: #fefbf1;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 30px;
+  margin: 2em 0;
+}
+
+.leftBubble,
+.rightBubble {
+  width: 50%;
+}
+
+.leftBubble img {
+  max-width: 100%;
+}
+
+.bubblebtn {
+  display: flex;
+  justify-content: center;
+}
+
+.bubblebtn .button {
+  padding: 0.6em 1em;
+  color: white;
+  font-weight: 500;
+  margin-top: 20px;
+  background-color: #fac952;
+  border: 2px solid #fdcb58;
+  border-radius: 14px;
+}
+
+.rightBubbleText {
+  padding-right: 1em;
+  color: #686979;
+}
