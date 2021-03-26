@@ -8,11 +8,25 @@
   --default: #0d1333;
   --gray: #f0f3fa;
   --red: #ff7368;
+  --blue: #4c94fe;
+  --green: #6ecf63;
 }
 
 body {
   font-family: "Roboto", sans-serif;
   color: var(--default);
+}
+
+.blue {
+  background-color: var(--blue);
+}
+
+.red {
+  background-color: var(--red);
+}
+
+.green {
+  background-color: var(--green);
 }
 
 .sideBarContainer {
@@ -85,4 +99,84 @@ body {
   border-radius: 50%;
   color: white;
   background-color: var(--red);
+}
+
+/* health Container */
+
+.healthContainer {
+  margin-top: 3em;
+}
+
+.health {
+  font-size: 1.2em;
+}
+
+.section3Container {
+  width: 100%;
+  display: flex;
+}
+
+.section3 {
+  width: 33.33%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.vd {
+  border-left: 2px solid var(--gray);
+}
+
+.data {
+  font-size: 2.4em;
+  font-weight: 400;
+  text-align: center;
+}
+
+.slider {
+  height: 6px;
+  border-radius: 6px;
+  width: 100%;
+  background-color: var(--gray);
+  position: relative;
+  overflow: hidden;
+}
+
+.slider::after {
+  content: "";
+  border-radius: 6px;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.holder {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 1em 0;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+.attr {
+  margin: 0 1em;
+}
+
+.slider-red::after {
+  background-color: var(--red);
+}
+
+.slider-blue::after {
+  background-color: var(--blue);
+  width: 80%;
+}
+
+.slider-green::after {
+  background-color: var(--green);
+  width: 40%;
 }
