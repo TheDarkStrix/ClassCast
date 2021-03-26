@@ -8,13 +8,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="container">
     <!-- Main sidebar container start -->
+    <div class="leftContent">
+      <div class="company">
+        <img src="assets/classCast.png"/>
+      </div>
+    </div>
     <div class="sideBarContainer">
       <section class="section">
         <div class="AccountContainer">
           <div class="account">
             <div class="profile">
-              <img src="" />
+              <img src="assets/profile1.png" width="40" height="40" />
             </div>
             <div class="user">
               <div class="username">Floyd Miles</div>
@@ -46,7 +52,7 @@
               <div class="data">6:25</div>
               <div class="holder">
                 <div class="icon blue">
-                  <img src="" />
+                  <img src="assets/moon.PNG" />
                 </div>
                 <div class="attr">Hours</div>
               </div>
@@ -57,7 +63,7 @@
               <div class="data">120</div>
               <div class="holder">
                 <div class="icon red">
-                  <img src="" />
+                  <img src="assets/heart.PNG" />
                 </div>
                 <div class="attr">Bpm</div>
               </div>
@@ -68,7 +74,7 @@
               <div class="data">1.84</div>
               <div class="holder">
                 <div class="icon green">
-                  <img src="" />
+                  <img src="assets/apple.PNG" />
                 </div>
                 <div class="attr">Kcal</div>
               </div>
@@ -79,17 +85,20 @@
 
         <!-- Health container end -->
         <!-- bubble section start -->
-        <div class="bubbleContainer">
-          <div class="bubble">
-            <div class="leftBubble">
-              <img src="assets/levels.png" />
-            </div>
-            <div class="rightBubble">
-              <div class="rightBubbleText">
-                Sign up for a personal trainer to improve your results
+        <div class="bubbleMain">
+          <div class="bubbleContainer">
+            <div class="bubbleBoxBehind bubblelightbg"></div>
+            <div class="bubble">
+              <div class="leftBubble">
+                <img src="assets/levels.png" />
               </div>
-              <div class="bubblebtn">
-                <div class="button">Sign Up</div>
+              <div class="rightBubble">
+                <div class="rightBubbleText">
+                  Sign up for a personal trainer to improve your results
+                </div>
+                <div class="bubblebtn">
+                  <div class="button">Sign Up</div>
+                </div>
               </div>
             </div>
           </div>
@@ -98,54 +107,63 @@
         <!-- training section start -->
         <div class="trainingContainer">
           <div class="heading">Today trainings</div>
-
-          <div class="trainingBox tblue">
-            <div>
-              <div class="title">Box</div>
-              <div class="subTitle">Sport Club</div>
-              <div class="timeContainer">
-                <div class="time">10:00</div>
+          <div class="trainingBoxContainer">
+            <div class="trainingBoxBehind tbluelight"></div>
+            <div class="trainingBox tblue">
+              <div>
+                <div class="title">Box</div>
+                <div class="subTitle">Sport Club</div>
+                <div class="timeContainer">
+                  <div class="time">10:00</div>
+                </div>
               </div>
-            </div>
-            <div class="exDetails">
-              <div class="duration">40</div>
-              <div class="spec">min</div>
-              <div class="excercise">Warm-up</div>
-            </div>
-            <div class="exDetails">
-              <div class="duration">20</div>
-              <div class="spec">min</div>
-              <div class="excercise">Stretch</div>
-            </div>
-            <div>
-              <div class="menu"><img src="assets/ellipsis-v.svg" /></div>
+              <div class="exDetails">
+                <div class="duration">40</div>
+                <div class="spec">min</div>
+                <div class="excercise">Warm-up</div>
+              </div>
+              <div class="exDetails">
+                <div class="duration">20</div>
+                <div class="spec">min</div>
+                <div class="excercise">Stretch</div>
+              </div>
+              <div>
+                <div class="menu"><img src="assets/ellipsis-v.svg" /></div>
+              </div>
             </div>
           </div>
-
-          <div class="trainingBox tred">
-            <div>
-              <div class="title">Box</div>
-              <div class="subTitle">Sport Club</div>
-              <div class="timeContainer">
-                <div class="time">10:00</div>
+          <div class="trainingBoxContainer">
+            <div class="trainingBoxBehind tredlight"></div>
+            <div class="trainingBox tred">
+              <div>
+                <div class="title">Box</div>
+                <div class="subTitle">Sport Club</div>
+                <div class="timeContainer">
+                  <div class="time">10:00</div>
+                </div>
               </div>
-            </div>
-            <div class="exDetails">
-              <div class="duration">40</div>
-              <div class="spec">min</div>
-              <div class="excercise">Warm-up</div>
-            </div>
-            <div class="exDetails">
-              <div class="duration">20</div>
-              <div class="spec">min</div>
-              <div class="excercise">Stretch</div>
-            </div>
-            <div>
-              <div class="menu"><img src="assets/ellipsis-v.svg" /></div>
+              <div class="exDetails">
+                <div class="duration">40</div>
+                <div class="spec">min</div>
+                <div class="excercise">Warm-up</div>
+              </div>
+              <div class="exDetails">
+                <div class="duration">20</div>
+                <div class="spec">min</div>
+                <div class="excercise">Stretch</div>
+              </div>
+              <div>
+                <div class="menu"><img src="assets/ellipsis-v.svg" /></div>
+              </div>
             </div>
           </div>
         </div>
         <!-- training section end -->
+        <div class="dotsContainer">
+          <div class="dots">
+            <img src="assets/ellipsis-v.svg" />
+          </div>
+        </div>
       </section>
       <div class="trainers">
         <div class="trainersHeading">Your trainers</div>
@@ -153,17 +171,19 @@
         <div class="tgContainer">
           <div class="account">
             <div class="profile">
-              <img src="" />
+              <img src="assets/profile2.png" width="40" height="40" />
+              <div class="statusIndicator"></div>
             </div>
             <div class="user">
               <div class="username">John Kavanagh</div>
               <div class="accType">MMA coach</div>
+              
             </div>
           </div>
 
           <div class="settingsContainer">
             <div class="settings">
-              <img src="assets/setting.svg" width="25" height="25" />
+              <img src="assets/comment-message.svg" width="25" height="25" />
             </div>
           </div>
         </div>
@@ -171,21 +191,24 @@
         <div class="tgContainer">
           <div class="account">
             <div class="profile">
-              <img src="" />
+              <img src="assets/profile3.png" width="60" height="60" />
+              <div class="statusIndicator"></div>
             </div>
             <div class="user">
               <div class="username">Jacob Jones</div>
               <div class="accType">Boxing coach</div>
+              
             </div>
           </div>
 
           <div class="settingsContainer">
             <div class="settings">
-              <img src="assets/setting.svg" width="25" height="25" />
+              <img src="assets/comment-message.svg" width="25" height="25" />
             </div>
           </div>
         </div>
       </div>
     </div>
   </body>
+</div>
 </html>

@@ -17,6 +17,28 @@ body {
   color: var(--default);
 }
 
+.container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.company {
+  width: 200px;
+}
+
+.company img {
+  max-width: 100%;
+}
+
+.leftContent {
+  width: calc(100% - 420px);
+  position: relative;
+  background-color: rgb(245, 245, 245);
+  height: 100%;
+  display: inline-block;
+}
+
 .blue {
   background-color: var(--blue);
 }
@@ -30,13 +52,20 @@ body {
 }
 
 .sideBarContainer {
-  width: 350px;
+  width: 420px;
+  display: block;
+  position: absolute;
+  right: 0;
+  height: 100vh;
+  overflow: auto;
+  display: inline-block;
 }
 
 .section {
-  background-color: #f9fafe;
+  background-image: linear-gradient(white 80%, #f9fafe);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  padding: 1em 15px;
 }
 
 .AccountContainer {
@@ -45,11 +74,13 @@ body {
   justify-content: space-between;
 }
 .profile {
-  background: blue;
-  width: 70px;
-  height: 70px;
+  background-image: linear-gradient(#ffe393, #ffecb0);
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .profile img {
@@ -90,18 +121,18 @@ body {
   border: 1px solid var(--gray);
   border-radius: 16px;
   padding: 6px 8px;
-  margin: 0 0.8em;
+  margin: 0 0 0 0.8em;
 }
 
 .indicator {
   position: absolute;
-  top: -4px;
-  right: -4px;
+  top: -8px;
+  right: -10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25px;
-  height: 25px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   color: white;
   background-color: var(--red);
@@ -113,13 +144,23 @@ body {
   margin-top: 3em;
 }
 
-.health {
+.health,
+.heading,
+.trainersHeading {
   font-size: 1.2em;
 }
 
 .section3Container {
   width: 100%;
   display: flex;
+}
+
+.section3Container .section3:first-of-type {
+  padding: 15px 15px 15px 0;
+}
+
+.section3Container .section3:last-of-type {
+  padding: 15px 0 15px 15px;
 }
 
 .section3 {
@@ -136,7 +177,7 @@ body {
 }
 
 .data {
-  font-size: 2.4em;
+  font-size: 2em;
   font-weight: 400;
   text-align: center;
 }
@@ -167,6 +208,15 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 4px;
+  display: block;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  justify-content: center;
+}
+
+.icon img {
+  max-width: 100%;
 }
 
 .attr {
@@ -191,12 +241,14 @@ body {
 
 .bubble {
   background-color: #fefbf1;
-  border: 1px solid white;
+  border: 2px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 30px;
   margin: 2em 0;
+  position: relative;
+  z-index: 3;
 }
 
 .leftBubble,
@@ -211,6 +263,7 @@ body {
 .bubblebtn {
   display: flex;
   justify-content: center;
+  padding-right: 1em;
 }
 
 .bubblebtn .button {
@@ -228,12 +281,29 @@ body {
   color: #686979;
 }
 
+.bubbleBoxBehind {
+  width: 92%;
+  height: 100%;
+  position: absolute;
+  /* display: flex; */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 54%;
+  margin-bottom: 12px;
+  z-index: 2;
+  border-radius: 20px;
+}
+
+.bubblelightbg {
+  background-color: #ffedc4;
+}
+
 /* training section */
 
 .tblue {
   background-color: #4d95fe;
 }
-.tblue::before {
+.tbluelight {
   background-color: #c0d8fe;
 }
 
@@ -241,8 +311,13 @@ body {
   background-color: #ff7368;
 }
 
-.tred::before {
+.tredlight {
   background-color: #fcbfc1;
+}
+
+.trainingBoxContainer,
+.bubbleMain {
+  position: relative;
 }
 
 .trainingBox {
@@ -252,20 +327,25 @@ body {
   border-radius: 20px;
   position: relative;
   border: 2px solid white;
-  margin: 15px 0 30px 0;
+  margin: 15px 0 15px 0;
+  z-index: 3;
 }
 
-.trainingBox::before {
-  content: "";
-  display: block;
-  width: 96%;
-  left: 8px;
+.trainingBoxBehind {
+  width: 92%;
   height: 100%;
-  z-index: -1;
-  bottom: -12px;
-  border-radius: 20px;
   position: absolute;
+  /* display: flex; */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 58%;
+  margin-bottom: 12px;
+  z-index: 2;
+  border-radius: 20px;
 }
+
+/* .trainingBox::before {
+} */
 
 .title {
   font-size: 1.2em;
@@ -276,6 +356,7 @@ body {
 .subTitle {
   font-weight: 500;
   color: white;
+  padding: 4px 0;
 }
 
 .timeContainer {
@@ -325,10 +406,69 @@ body {
   width: 30px;
 }
 
+.dotsContainer {
+  display: flex;
+
+  padding-bottom: 2px;
+  justify-content: center;
+}
+
+.dotsContainer .dots {
+  transform: rotate(90deg);
+  filter: invert(1);
+  max-width: 100%;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+}
+
 /* trainers */
+
+.trainers {
+  padding: 15px;
+}
+
+.profile {
+  position: relative;
+}
 
 .tgContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 1em 0em;
+}
+
+.user {
+  position: relative;
+}
+
+.statusIndicator {
+  width: 15px;
+  height: 15px;
+  background-image: linear-gradient(#b1fe95 50%, #c1ffae);
+  border-radius: 50%;
+  bottom: 4px;
+  right: 0px;
+  position: absolute;
+}
+
+@media screen and (max-width: 416px) {
+  .attr {
+    margin: 0 0.5em;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .leftContent {
+    display: none;
+  }
+  .sideBarContainer {
+    width: 100%;
+    display: block;
+    position: relative;
+    right: 0;
+    height: 100vh;
+    overflow: auto;
+  }
 }
